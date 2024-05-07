@@ -20,14 +20,29 @@
       </select>
     </p>
     <p>
-      <img class="character-img" src="img/steve.jpg" alt="Steve" />
-      <img class="character-img" src="img/alex.jpg" alt="Alex" />
-      <img class="character-img" src="img/villager.jpg" alt="Villager" />
+      <img id="steve" class="character-img" src="img/steve.jpg" alt="Steve" />
+      <img id="alex" class="character-img" src="img/alex.jpg" alt="Alex" />
+      <img
+        id="villager"
+        class="character-img"
+        src="img/villager.jpg"
+        alt="Villager"
+      />
     </p>
     <hr />
+    <h1>Simulate Fishing</h1>
 
     <p>
-      <button id="fish-btn">Fish</button>
+      <button id="fish-btn">Fish</button><button id="plus5">+5</button
+      ><button id="till200">Until 200 Cod</button
+      ><button id="sortFish">Sort Fish</button>
+      <input
+        placeholder="Max 500"
+        id="userFishNum"
+        type="number"
+        max="500"
+        min="0"
+      />
     </p>
 
     <p>
@@ -46,5 +61,9 @@
       <img src="img/Pufferfish.png" alt="Pufferfish" width="20px" />
       Pufferfish: <span id="num-puffer">0</span>
     </p>
+
+    <hr />
+    <h1>Fishing Inventory</h1>
+    <div id="fish-inventory"></div>
   </body>
 </html>
