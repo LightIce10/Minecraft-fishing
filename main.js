@@ -2,10 +2,17 @@
 
 // HTML Vaiaables
 let resulting = document.getElementById("result-img");
+
 let numCodSpan = document.getElementById("num-cod");
 let numSalmonSpan = document.getElementById("num-salmon");
 let numTropicalSpan = document.getElementById("num-tropical");
 let numPufferSpan = document.getElementById("num-puffer");
+
+let invCod = document.getElementById("inv-Cod");
+let invSalmon = document.getElementById("inv-Salmon");
+let invTrop = document.getElementById("inv-Tropical");
+let invPuff = document.getElementById("inv-Pufferfish");
+
 let plus5Btn = document.getElementById("plus5");
 let till200Btn = document.getElementById("till200");
 let letsFish = document.getElementById("fish-btn");
@@ -29,12 +36,11 @@ userNum.addEventListener("change", userFish);
 
 function fishOnce() {
   let character = document.getElementById("character-select").value;
-  console.log(character);
 
   if (character === "steve") {
     // Steve Fish Simulator
     let randNum = Math.random();
-    console.log(randNum);
+
     if (randNum < 0.7) {
       document.getElementById("result-img").src = "img/Raw-Cod.png";
       numCod++;
@@ -59,7 +65,7 @@ function fishOnce() {
   } else if (character === "alex") {
     // Alex Fish Simulator
     let randNum = Math.random();
-    console.log(randNum);
+
     if (randNum < 0.1) {
       document.getElementById("result-img").src = "img/Raw-Cod.png";
       numCod++;
@@ -84,7 +90,7 @@ function fishOnce() {
   } else if (character === "villager") {
     // Villager Fish Simulator
     let randNum = Math.random();
-    console.log(randNum);
+
     if (randNum < 0.25) {
       document.getElementById("result-img").src = "img/Raw-Cod.png";
       numCod++;
@@ -107,6 +113,7 @@ function fishOnce() {
       fishInv.innerHTML += "<img src='img/Pufferfish.png' width='25px'>";
     }
   }
+  console.log(numCod);
 }
 
 function userFish() {
@@ -130,7 +137,30 @@ function toTwoHunnid() {
 }
 
 function sort() {
-  fishInv.innerHTML = ""
-// Cod
-  for(codNum){}
+  fishInv.innerHTML = "";
+
+  invCod = 0;
+  invSalmon = 0;
+  invTrop = 0;
+  invPuff = 0;
+
+  // Cod
+  for (numCod; numCod > invCod; invCod++) {
+    fishInv.innerHTML += "<img src='img/Raw-Cod.png' width='25px'>";
+  }
+
+  // Salmon
+  for (numSalmon; numSalmon > invSalmon; invSalmon++) {
+    fishInv.innerHTML += "<img src='img/Raw-Salmon.png' width='25px'>";
+  }
+
+  // Tropical
+  for (numTropical; numTropical > invTrop; invTrop++) {
+    fishInv.innerHTML += "<img src='img/Tropical-Fish.png' width='25px'>";
+  }
+
+  // Pufferfish
+  for (numPuffer; numPuffer > invPuff; invPuff++) {
+    fishInv.innerHTML += "<img src='img/Pufferfish.png' width='25px'>";
+  }
 }
